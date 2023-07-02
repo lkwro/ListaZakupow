@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    margin-bottom: 2em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 1em;
+}
+
+input[type="checkbox"] {
+    margin-right: 1em;
+}
+
+.delete-link {
+    color: blue;
+    text-decoration: underline;
+    align-self: center;
+}
+
+.list-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: fit-content;
+}
+
+.prod-text {
+    margin-left: 10px;
+    margin-right: auto;
+    flex: 0 0 20ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista zakupów</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" th:href="@{/styles.css}" type="teXT/CSS"/>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById("produkt").focus();
+        };
+    </script>
+</head>
+<body>
+    <h1>Lista zakupów</h1>
+    <form action="#" th:action="@{/dodajProdukt}" method="post">
+        <label for="produkt">Dodaj produkt: </label>
+        <input type="text" id="produkt" name="produkt" required/>
+        <input type="submit" value=" Dodaj "/>
+
+    </form>
+    <ul>
+        <li class="list-item" th:each="prod : ${produkty}">
+            <input type="checkbox" th:id="${prod}"/>
+            <span class="prod-text" th:text="${prod}"></span>
+            <a th:href="@{'/usunProdukt/'+${prod}}" class="delete-link">usuń</a>
+        </li>
+    </ul>
+</body>
+</html>
